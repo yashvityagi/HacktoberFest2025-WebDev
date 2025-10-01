@@ -1,0 +1,1357 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Raleway', 'Lato', 'Noto Sans';
+}
+
+html,
+Body {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    cursor: none;
+}
+
+.preloader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    transition: 1s;
+    transition-delay: 1s;
+}
+
+.preloader.hide {
+    transform: translateY(-150%);
+}
+
+.preloader svg {
+    width: 100px;
+    height: 100px;
+    animation: preloader 8s infinite linear;
+
+}
+
+@keyframes preloader {
+    0% {
+        transform: rotate(0deg);
+        fill: #000;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        fill: #B9FF66;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        fill: #000;
+    }
+}
+
+#page1 {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    height: 15vh;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8vh 8vw 8vh 6.3vw;
+}
+
+#nleft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    height: 100%;
+    width: 20vw;
+    cursor: pointer;
+}
+
+#nleft h2 {
+    font-size: 2.6vw;
+    text-align: center;
+    text-wrap: nowrap;
+    font-weight: 800;
+    font-family: "Space Grotesk", serif !important;
+    overflow: hidden;
+    width: 15vw;
+}
+
+#overflow{
+    overflow: hidden;
+}
+
+#nleft img {
+    transform: rotate(45deg);
+    block-size: 4vw;
+}
+
+#nright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    cursor: pointer;
+    gap: 10px;
+}
+
+#nright button{
+    background-color: #ffffff;
+    color: #000;
+    padding: 0.5vw 1vw;
+    border: 1px solid black;
+    border-radius: 14px;
+    cursor: pointer;
+    height: 9vh;
+    width: 15vw;
+    font-size: 1.4vw;
+    font-weight: 400;
+    text-align: center;
+    text-wrap: nowrap;
+    font-family: "Space Grotesk", serif !important;
+}
+
+#nright button:hover{
+    font-weight: 700;
+    background-color: #B9FF66;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px 10px rgba(186, 255, 102, 0.96);
+    transition: all 0.4s ease-in-out;
+}
+
+#nright h4{
+    font-size: 1.4vw;
+    font-weight: 400;
+    text-align: center;
+    text-wrap: nowrap;
+    font-family: "Space Grotesk", serif !important;
+    z-index: 10;
+}
+
+#hero{
+    position: relative;
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#hright{
+    width: 50%;
+    height: 100%;
+}
+
+.absolute{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#Megaphone{
+    width: 23%;
+    height: 23vw;
+    top: 35.5vh;
+    left: 74.6%;
+    transform: translate(-50%, -50%);
+}
+
+#Star{
+    block-size: 3vw;
+    top: 69vh;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
+.Star{
+    block-size: 7vw;
+    top: 58vh;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+#BlackCircle{
+    block-size: 4vw;
+    top: 15vh;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+#greenCricle{
+    block-size: 2vw;
+    top: 22vh;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+.greenCricle{
+    block-size: 1.5vw;
+    top: 67vh;
+    left: 82%;
+    transform: translate(-50%, -50%);
+}
+
+.Ring1{
+    top: 45vh;
+    left: 76%;
+    transform: translate(-50%, -50%);
+}
+
+.Ring2{
+    top: 48vh;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
+.Ring3{
+    top: 51vh;
+    left: 74%;
+    transform: translate(-50%, -50%);
+}
+
+#Like{
+    top: 13vh;
+    left: 85%;
+    transform: translate(-50%, -50%);
+}
+
+#Share{
+    top: 16vh;
+    left: 91%;
+    transform: translate(-50%, -50%);
+}
+
+#Play{
+    top: 29vh;
+    left: 90.5%;
+    transform: translate(-50%, -50%);
+}
+
+#Location{
+    top: 43.7vh;
+    left: 89.6%;
+    transform: translate(-50%, -50%);
+}
+
+#hleft{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+#hleft h1{
+    font-size: 4vw;
+    font-weight: 500;
+    text-wrap: wrap;
+    font-family: "Space Grotesk", serif !important;
+    margin-top: 5vh;
+    margin-left: 2vw;
+    padding: 1vh 5vw;
+}
+
+#hleft p{
+    font-size: 1.13vw;
+    font-weight: 400;
+    text-wrap: wrap;
+    font-family: "Inter", serif !important;
+    margin-left: 2vw;
+    padding: 5vh 5vw;
+}
+
+#hleft button{
+    position: relative;
+    background-color: #111;
+    color: #ffffff;
+    padding: 0.5vw 1vw;
+    border: 1px solid black;
+    border-radius: 14px;
+    cursor: pointer;
+    height: 9vh;
+    width: 15vw;
+    font-size: 1.4vw;
+    font-weight: 400;
+    text-align: center;
+    text-wrap: nowrap;
+    font-family: "Space Grotesk", serif !important;
+    margin-left: 7vw;
+}
+
+#hleft button:hover {
+    font-weight: 700;
+    background-color: #111;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px 10px rgb(14, 13, 18);
+    transition: all 0.4s ease-in-out;
+}
+
+.overlay{
+    height: 9vh;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 13px;
+}
+
+.overlay:hover{
+    background-color: #B9FF66;
+    transition: all 0.4s ease-in-out;
+}
+
+.About{
+    width: 8vw;
+}
+
+.Service{
+    width: 8vw;
+}
+
+.Contact{
+    width: 9vw;
+}
+
+.FAQ{
+    width: 7vw;
+}
+
+.Blog{
+    width: 7vw;
+}
+
+#page2{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#move{
+    background-color: #fff;
+    display: flex;
+    padding: 2vw 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#move::before{
+    left: 0;
+    background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.912)
+    );
+}
+
+#move::after{
+    right: 0;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.912)
+    );
+}
+
+#move::before, #move::after{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 27vw;
+    content: '';
+    z-index: 2;
+}
+
+.marque{
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    padding: 0 1.5vw;
+}
+
+.animleft{
+    animation: slideLeft 15s linear infinite;
+}
+
+#move:hover .marque{
+    animation-play-state: paused;
+}
+
+.marque h1{
+    font-size: 3vw;
+    font-weight: 600;
+    font-family: "Space Grotesk", "Inter";
+}
+
+.marque img{
+    height: 4.2vw;
+}
+
+
+
+@keyframes slideLeft{
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideRight {
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+#service{
+    margin: 3vh 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+}
+
+#sleft{
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+#sleft h1{
+    font-size: 3vw;
+    font-family: "Space Grotesk";
+    color: #111;
+    margin-left: 4vw;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #B9FF66;
+}
+
+#sright{
+    width: 65%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    white-space: wrap;
+}
+
+#sright p{
+    font-family: "Space Grotesk";
+    color: #111;
+    margin-right: 4vw;
+}
+
+#sCard{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5vw;
+    width: 100%;
+    height: 40vh;
+    flex-direction: row;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.scleft{
+    width: 35%;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F3F3F3;
+    border-radius: 30px;
+    border: 2px solid black;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.967);
+}
+
+.stext{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 2px;
+    position: relative;
+}
+
+.SCLtext h2{
+    font-size: 1.6vw;
+    padding: 2px 7px;
+    font-weight: 700;
+    background-color: #B9FF66;
+    font-family: "Space Grotesk";
+    color: #111;
+    border-radius: 10px;
+}
+
+.LearnM{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-left: 90px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.simage{
+    height: auto;
+    width: auto;
+    margin-right: 30px;
+    font-weight: 900;
+}
+
+.scright{
+    width: 35%;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #B9FF66;
+    border-radius: 30px;
+    border: 2px solid black;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.967);
+}
+
+.SCRtext h2{
+    font-size: 1.6vw;
+    padding: 2px 7px;
+    font-weight: 700;
+    background-color: #F3F3F3;
+    font-family: "Space Grotesk";
+    color: #111;
+    border-radius: 10px;
+}
+
+#page3{
+    width: 100%;
+}
+
+#work{
+    margin: 1.3vh 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 20vh;
+    gap: 3.3vw;
+}
+
+#wleft{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#wleft h1{
+    font-size: 3vw;
+    font-family: "Space Grotesk";
+    color: #111;
+    margin-left: 10.5vw;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #B9FF66;
+}
+
+#wright{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    white-space: wrap;
+}
+
+#wright p{
+    font-family: "Space Grotesk";
+    color: #111;
+    margin-right: 4vw;
+}
+
+#workProcess{
+    margin-top: 3vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+}
+
+.wp{
+    transition: all 0.7s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 22vh;
+    width: 80vw;
+    background-color: #F3F3F3;
+    border-radius: 42px;
+    border: 1.5px solid black;
+    box-shadow: 0px 5px 0px black;
+}
+
+.wp:hover{
+    cursor:none; 
+}
+
+.workProcessText{
+    color: #111;
+    margin-left: 4vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.wpheading{
+    font-weight: 600;
+    margin-top: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.wpheading h1{
+    font-size: 4.5vw;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+}
+
+.wpheading h2{
+    font-size: 2.5vw;
+    margin-left: 3vw;
+    font-weight: 400;
+    font-family: "Space Grotesk";
+}
+
+.workProcessIcon{
+    transition: all 0.7s ease-in-out;
+    margin-right: 4vw;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workProcessIcon img{
+    font-weight: 900;
+}
+
+
+.wpinfo{
+    white-space: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 2vh;
+}
+
+.wpinfo p{
+    font-weight: 500;
+    font-family: "Space Grotesk";
+}
+
+.open{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40vh;
+    width: 80vw;
+    background-color: #B9FF66;
+    border-radius: 42px;
+    border: 1.5px solid black;
+    box-shadow: 0px 5px 0px black;
+    position: relative;
+}
+
+.imgopen{
+    position: absolute;
+    top: 16%;
+    right: 1%;
+}
+
+.hidden{
+    display: none;
+    opacity: 0;
+    transform: scale(0%);
+}
+
+#page4{
+    height: 100%;
+    width: 100%;
+}
+
+#particle-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #B9FF66;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+#string1, #string2, #string3, #string4, #string5, #string6:hover{
+    cursor: grabbing;
+}
+
+#Testimonials{
+    margin: 10vh 0 5vh 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 20vh;
+    gap: 5vw;
+}
+
+#tleft{
+    width: 30%;
+    display: flex;
+}
+
+#tleft h1{
+    font-size: 3vw;
+    font-family: "Space Grotesk";
+    color: #111;
+    margin-left: 12vw;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #B9FF66;
+}
+
+#tright{
+    width: 40%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    white-space: wrap;
+}
+
+#tright p{
+    font-family: "Space Grotesk";
+    color: #111;
+    margin-right: 4vw;
+}
+
+#Tcontainer{
+    margin: 0 14vw;
+    width: 70%;
+    border-radius: 45px;
+    height: 65vh;
+    padding: 5vh 0vh;
+    background-color: #191A23;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.ArrLeft{
+    rotate: 180deg;
+}
+
+#Tnav{
+    display: flex;
+    gap: 10vw;
+}
+
+.Tarrow{
+    width: 35px;
+    height: 35px;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+#Tstars{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#Tstars svg{
+    height: 15px;
+    width: 12px;
+    fill: white;
+}
+
+#Tcards{
+    width: 100%;
+    display: flex;
+    gap: 2vw;
+    color: white;
+    transform: translateX(25%);
+}
+
+/*
+25 - 1
+-35 - 2
+-100 - 3
+-155 - 4
+-220 - 5
+*/
+
+.Tinfo{
+    display: flex;
+    flex-direction: column;
+    margin-left: 3.5vw;
+    margin-top: 1vh;
+}
+
+.Tcard{
+    position: relative;
+}
+
+.Tinfo h3{
+    font-size: 1.5vw;
+    font-weight: 500;
+    font-family: "Space Grotesk";
+    margin-bottom: 1vh;
+    color: #B9FF66;
+}
+
+.Tinfo h4{
+    font-family: "Space Grotesk";
+}
+
+.Tabsolute{
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    height: 22vh;
+    width: 30vw;
+    overflow-y: scroll;
+}
+
+.Tabsolute::-webkit-scrollbar {
+    display: none;
+}
+
+body::-webkit-scrollbar{
+    background-color: #F3F3F3;
+    width: 13px;
+    border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #B9FF66;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.Tabsolute{
+    font-family: "Space Grotesk";
+}
+
+#page5{
+    height: 100%;
+    width: 100%;
+}
+
+#Contact{
+    margin: 5vh 0 2vh 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 20vh;
+    gap: 5vw;
+}
+
+#Cleft{
+    width: 30%;
+    display: flex;
+}
+
+#Cleft h1{
+    font-size: 3vw;
+    font-family: "Space Grotesk";
+    color: #111;
+    margin-left: 12vw;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #B9FF66;
+}
+
+#Cright{
+    width: 30%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    white-space: wrap;
+}
+
+#Cright p{
+    font-family: "Space Grotesk";
+    color: #111;
+    margin-right: 4vw;
+}
+
+#Ccontainer{
+    margin: 0 14vw;
+    width: 70%;
+    border-radius: 45px;
+    height: 70vh;
+    padding: 5vh 0vh;
+    background-color: #F3F3F3;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+#CFRMIMG{
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BlStr{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    right: 15%;
+}
+
+.GrStr{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    margin-top: 40vh;
+    right: 25%;
+}
+
+#CFRM{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.INPUT{
+    width: 30vw;
+    height: 6vh;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 1vw;
+    font-family: "Space Grotesk";
+    padding-left: 1.5vw;
+    display: flex;
+}
+
+.INPUT::placeholder{
+    color: rgba(128, 128, 128, 0.659);
+    font-weight: 800;
+    font-family: "Space Grotesk";
+    font-size: 1vw;
+}
+
+.INPUT:focus::placeholder{
+    color: transparent;
+}
+
+#CfName label, #CEmail label, #CMessage label{
+    font-size: 1vw;
+    font-weight: 400;
+    font-family: "Space Grotesk";
+    user-select: none;
+}
+
+#CfName, #CEmail, #CMessage{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6vh;
+}
+
+#Message{
+    height: 13vh;
+    width: 30vw;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-size: 1vw;
+    font-family: "Space Grotesk";
+    padding: 0 1.5vw;
+    display: flex;
+    padding-top: 20px;
+    user-select: none;
+}
+
+#Message::-webkit-scrollbar{
+    display: none;
+}
+
+#Message::placeholder{
+    color: rgba(128, 128, 128, 0.659);
+    font-weight: 800;
+    font-family: "Space Grotesk";
+    font-size: 1vw;
+    padding-top: 2vh;
+}
+
+#Message:focus::placeholder{
+    color: transparent;
+}
+
+#SM{
+    height: 7vh;
+    width: 30vw;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 1.17vw;
+    font-family: "Space Grotesk";
+    font-weight: 600;
+    color: white;
+    background-color: #000;
+}
+
+#SM:hover{
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.808);
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    margin-left: 5vw;
+    margin-top: 2vh;
+}
+
+#rad{
+    margin-left: 5vw;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#Radio{
+    accent-color: #B9FF66;
+    height: 20px;
+    width: 20px;
+    user-select: none;
+}
+
+#rad span{
+    font-family: "Space Grotesk";
+    user-select: none;
+}
+
+.wp:hover{
+    background-color: #B9FF66;
+    box-shadow: 0 0 50px 10px #baff66d7;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.LearnM:hover .arrow{
+    box-shadow: 0 0 10px 2px #000;
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.LearnM:hover .arrow>img{
+    transform: rotate(30deg);
+    transition: all 0.5s ease-in-out;
+}
+
+#Footer{
+    height: 60vh;
+    color: white;
+    margin-top: 20vh;
+    margin-left: 10vw;
+    width: 80%;
+    border-radius: 45px 45px 0px 0px;
+    border-top: #000;
+    background-color: #191A23;
+    padding: 40px;
+}
+
+#Linkedin img{
+    height: 30px;
+    user-select: none;
+    filter: invert();
+}
+
+#Github img:hover, #Linkedin img:hover{
+    transform: scale(1.35);
+    transition: all 0.4s ease-in-out;
+}
+
+#Github img{
+    height: 30px;
+    filter: invert();
+    user-select: none;
+}
+
+#Fnav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+}
+
+#Fleft{
+    display: flex;
+    gap: 1.3vw;
+    align-items: center;
+}
+
+#Fleft img{
+    height: 55px;
+    user-select: none;
+}
+
+#Fleft h2{
+    font-size: 2.4vw;
+    font-family: "Space Grotesk";
+    color: #B9FF66;
+    user-select: none;
+}
+
+#Fright{
+    display: flex;
+    gap: 3vw;
+    align-items: center;
+}
+
+#STRING{
+    filter: invert();
+    margin-left: 3vw;
+}
+
+#Fcont{
+    margin-top: 50px;
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#CoAdd{
+    padding-left: 5vw;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3vw;
+}
+
+#CoAdd h1{
+    width: fit-content;
+    padding: 0 6px;
+    border-radius: 8px;
+    font-size: 1.7vw;
+    color: #000;
+    font-weight: 500;
+    background-color: #B9FF66;
+    font-family: "Space Grotesk";
+}
+
+#CoAdd p{
+    font-size: 0.8vw;
+    font-family: "Space Grotesk";
+}
+
+#CoCard{
+    width: 50%;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.3vw;
+    background-color: #292A32;
+    height: 20vh;
+    margin-right: 6vw;
+}
+
+#Subscribe{
+    width: 40%;
+    height: 8vh;
+    background-color: #B9FF66;
+    border-radius: 20px;
+    font-size: 1.1vw;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    user-select: none;
+}
+
+#Subscribe:hover{
+    box-shadow: 0 0 10px 3px #baff66d7;
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+}
+
+#CoCard input{
+    width: 40%;
+    height: 8vh;
+    border-radius: 15px;
+    border: 2px solid white;
+    background-color: #191A23;
+    font-size: 1.1vw;
+    font-family: "Space Grotesk";
+    padding-left: 1.5vw;
+    color: white;
+}
+
+#CoCard input::placeholder{
+    color: white;
+    font-size: 1.1vw;
+    font-family: "Space Grotesk";
+    font-weight: 400;
+    padding-left: 1.5vw;
+}
+
+#CoCard input:focus::placeholder{
+    color: transparent;
+}
+
+#CoCard input:focus{
+    box-shadow: 0 0 50px 2px #fff;
+}
+
+#FinalFooter{
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    padding-left: 3.6vw;
+}
+
+#PrPolicy, #RR-2023{
+    font-size: 0.8vw;
+    font-family: "Space Grotesk";
+    user-select: none;
+}
+
+#PrPolicy:hover, #RR-2023:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    user-select: none;
+}
+
+#page2B{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70vh;
+    margin: 10vh 0;
+    background-color: #B9FF66;
+    gap: 5vh;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+
+#page2B:hover{
+    cursor: auto;
+    box-shadow: 0 0 50px 30px #baff66f9;
+}
+
+#page2B h1{
+    font-size: 4vw;
+    font-family: "Space Grotesk";
+    color: #000000;
+    font-weight: 900;
+    user-select: none;
+}
+
+
+.pop-image {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+    opacity: 0.6;
+    user-select: none;
+    will-change: transform, opacity;
+}
+
+.pop-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, 0%);
+    background-color: transparent;
+    clip-path: inset(-300px 0px -5px 0px);
+    user-select: none;
+    will-change: transform, opacity;
+}
+
+#Tstars:hover{
+    cursor: pointer;
+}
+
+#MAIN{
+    height: 100%;
+    width: 100%;
+}
