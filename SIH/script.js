@@ -544,6 +544,114 @@ function WorkingProcessAnimation(){
 }
 
 
+function FAQAnimation(){
+    var elements = [
+        { faq: document.querySelector(".faq1"), faqIcon: document.querySelector(".faqIcon1"), ans: document.querySelector(".faqAns1"), pth: document.querySelector("#faqStr1") },
+        { faq: document.querySelector(".faq2"), faqIcon: document.querySelector(".faqIcon2"), ans: document.querySelector(".faqAns2"), pth: document.querySelector("#faqStr2") },
+        { faq: document.querySelector(".faq3"), faqIcon: document.querySelector(".faqIcon3"), ans: document.querySelector(".faqAns3"), pth: document.querySelector("#faqStr3") },
+        { faq: document.querySelector(".faq4"), faqIcon: document.querySelector(".faqIcon4"), ans: document.querySelector(".faqAns4"), pth: document.querySelector("#faqStr4") },
+        { faq: document.querySelector(".faq5"), faqIcon: document.querySelector(".faqIcon5"), ans: document.querySelector(".faqAns5"), pth: document.querySelector("#faqStr5") },
+        { faq: document.querySelector(".faq6"), faqIcon: document.querySelector(".faqIcon6"), ans: document.querySelector(".faqAns6"), pth: document.querySelector("#faqStr6") }
+    ];
+
+    elements.forEach(function(item) {
+        var faq = item.faq;
+        var faqIcon = item.faqIcon;
+        var ans = item.ans;
+        var pth = item.pth;
+
+        faq.addEventListener("click", function() {
+            faq.classList.toggle("open");
+            pth.classList.toggle("hidden");
+            ans.classList.toggle("hidden");
+            faqIcon.classList.toggle("imgopen");
+
+            if (faqIcon.classList.contains("imgopen")) {
+                faqIcon.innerHTML = `<img src="./assets/-.svg" alt="">`;
+            } else {
+                faqIcon.innerHTML = `<img src="./assets/+.svg" alt="">`;
+            }
+        });
+    });
+}
+
+
+function FAQStringAnimation(){
+    var initialPath = `M 10 50 Q 600 50 1100 50`;
+    var Path = `M 10 50 Q 600 50 1100 50`;
+
+    var faqStrings = [
+        document.querySelector("#faqString1"),
+        document.querySelector("#faqString2"),
+        document.querySelector("#faqString3"),
+        document.querySelector("#faqString4"),
+        document.querySelector("#faqString5"),
+        document.querySelector("#faqString6")
+    ];
+
+    faqStrings.forEach(function(faqString, index) {
+        var strId = `#faqStr${index + 1}`;
+        
+        faqString.addEventListener("mousemove", function (dets) {
+            var svgElement = faqString.querySelector("svg");
+            var boundingBox = svgElement.getBoundingClientRect();
+            var relativeX = dets.clientX - boundingBox.left;
+            var relativeY = dets.clientY - boundingBox.top;
+            
+            initialPath = `M 10 50 Q ${relativeX} ${relativeY} 1100 50`;
+            
+            gsap.to(`${strId} path`, {
+                attr: { d: initialPath },
+                duration: 0.2,
+                ease: "power3.out",
+            });
+        });
+
+        faqString.addEventListener("mouseleave", function () {
+            gsap.to(`${strId} path`, {
+                attr: { d: Path },
+                duration: 1.3,
+                ease: "elastic.out(1, 0.1)",
+            });
+        });
+    });
+}
+
+
+function Page4BAnimation(){
+    var tl4b = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#page4B",
+            scroller: "body",
+            start: "top 70%",
+            end: "top 20%",
+            scrub: 2,
+        }
+    })
+
+    tl4b.from("#faqLeft", {
+        duration: 2,
+        opacity: 0,
+        x: -200,
+        ease: "power3.inout",
+    }, "faqAn1")
+
+    tl4b.from("#faqRight", {
+        duration: 2,
+        opacity: 0,
+        x: 200,
+        ease: "power3.inout",
+    }, "faqAn1")
+
+    tl4b.from("#faqProcess", {
+        duration: 2,
+        opacity: 0,
+        y: 100,
+        ease: "power5.out",
+    }, "faqAn1")
+}
+
+
 function Page3Animation(){
 
     var tl3 = gsap.timeline({
@@ -622,11 +730,11 @@ function Page4Animation(){
 }
 
 
-function Page5Animation(){
+function Page6Animation(){
 
-    var tl5 = gsap.timeline({
+    var tl6 = gsap.timeline({
         scrollTrigger: {
-            trigger: "#page5",
+            trigger: "#page6",
             scroller: "body",
             start: "top 60%",
             end: "top 20%",
@@ -634,21 +742,21 @@ function Page5Animation(){
         }
     })
 
-    tl5.from("#Cleft", {
+    tl6.from("#Cleft", {
         duration: 1,
         opacity: 0,
         x: -200,
         ease: "power3.out",
     }, "anim4")
 
-    tl5.from("#Cright", {
+    tl6.from("#Cright", {
         duration: 1,
         opacity: 0,
         x: 200,
         ease: "power3.out",
     }, "anim4")
 
-    tl5.from("#Ccontainer", {
+    tl6.from("#Ccontainer", {
         duration: 3,
         scale: 0,
         opacity: 0,
@@ -656,7 +764,7 @@ function Page5Animation(){
         ease: "power3.out",
     })
 
-    tl5.from("#CFRM", {
+    tl6.from("#CFRM", {
         duration: 2,
         opacity: 0,
         X: -500,
@@ -664,7 +772,7 @@ function Page5Animation(){
         stagger: 0.7,
     })
 
-    tl5.from("#CFRMIMG", {
+    tl6.from("#CFRMIMG", {
         duration: 2,
         opacity: 0,
         X: 500,
@@ -699,9 +807,9 @@ function Page5Animation(){
 
 
 function FooterAnimation(){
-    var tl6 = gsap.timeline({
+    var tl7 = gsap.timeline({
         scrollTrigger: {
-            trigger: "#page5",
+            trigger: "#page6",
             scroller: "body",
             start: "top -50%",
             end: "top -70%",
@@ -716,28 +824,28 @@ function FooterAnimation(){
         ease: "none",
     })
 
-    tl6.from("#Footer", {
+    tl7.from("#Footer", {
         duration: 1,
         opacity: 0,
         y: 200,
         ease: "power3.out",
     })
 
-    tl6.from("#Fnav", {
+    tl7.from("#Fnav", {
         duration: 1,
         opacity: 0,
         y: 100,
         ease: "elastic.out(0.1)",
     })
 
-    tl6.from("#Fcont", {
+    tl7.from("#Fcont", {
         duration: 1,
         opacity: 0,
         y: 100,
         ease: "power3.out",
     })
     
-    tl6.from("#FinalFooter, #StringFinal", {
+    tl7.from("#FinalFooter, #StringFinal", {
         duration: 1,
         opacity: 0,
         y: -100,
@@ -990,6 +1098,52 @@ function getRandomImageUrl() {
 }
 
 
+// Smooth scroll functionality
+function initSmoothScroll() {
+    // Navigation scroll function
+    function goTo(targetSelector) {
+        const targetEl = document.querySelector(targetSelector);
+        if (!targetEl) return;
+        
+        targetEl.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+        });
+    }
+
+    // Add click event to Contact Us navigation
+    document.querySelector('.overlay.Contact').addEventListener('click', function(e) {
+        e.preventDefault();
+        goTo('#page6');
+    });
+
+    // Optional: Add smooth scroll to other navigation items
+    document.querySelector('.overlay.About')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        goTo('#page1');
+    });
+
+    document.querySelector('.overlay.Service')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        goTo('#page2');
+    });
+
+    document.querySelector('.overlay.FAQ')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        goTo('#page4B');
+    });
+
+    // Add smooth scroll to "Take Test Free" buttons
+    document.querySelectorAll('button').forEach(btn => {
+        if (btn.textContent.trim() === 'Take Test Free') {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                goTo('#page3');
+            });
+        }
+    });
+}
+
 window.onload = async function () {
     document.querySelector(".preloader").classList.add("hide");
 
@@ -1044,30 +1198,36 @@ window.onload = async function () {
         ease: "power3.out",
     });
 
-    gsap.from("#hright img", {
-        delay: 2,
-        x: 50,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
-        stagger: 0.08,
-        onComplete: async function () {
-            CursorAnimation()
-            animateText();
-            ImageAnimation();
-            InfinityScrollAnimation()
-            Page2Animation()
-            StringAnimation()
-            WorkingProcessAnimation()
-            Page3Animation()
-            Page4Animation()
-            Page5Animation()
-            FooterStringAnimation()
-            FooterAnimation()
-            TestimonialAnimation()
-            Page2BAnimation()
+        gsap.from("#hright img", {
+            delay: 2,
+            x: 50,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out",
+            stagger: 0.08,
+            onComplete: async function () {
+                // Initialize smooth scroll functionality
+                initSmoothScroll();
+                
+                CursorAnimation()
+                animateText();
+                ImageAnimation();
+                InfinityScrollAnimation()
+                Page2Animation()
+                StringAnimation()
+                WorkingProcessAnimation()
+                FAQAnimation()
+                FAQStringAnimation()
+                Page3Animation()
+                Page4Animation()
+                Page4BAnimation()
+                Page6Animation()
+                FooterStringAnimation()
+                FooterAnimation()
+                TestimonialAnimation()
+                Page2BAnimation();
 
-            Shery.mouseFollower({
+                Shery.mouseFollower({
                 skew: true,
                 ease: "cubic-bezier(0.23, 1, 0.320, 1)",
                 duration: 1,

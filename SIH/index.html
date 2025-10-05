@@ -14,7 +14,7 @@
 </head>
 
 <body>
-<div id="MAIN">
+<div id="MAIN" data-scroll-container>
     <div id="particle-container"></div>
 
     <div class="preloader show">
@@ -40,11 +40,11 @@
                     <h4>Services</h4>
                 </div>
 
-                <div id="overflow" class="overlay Contact">
+                <div id="overflow" class="overlay Contact" data-target="#page6">
                     <h4>Contact Us</h4>
                 </div>
 
-                <div id="overflow" class="overlay FAQ">
+                <div id="overflow" class="overlay FAQ" data-target="#page4B">
                     <h4>FAQ</h4>
                 </div>
 
@@ -420,7 +420,159 @@
         </div>
     </section>
 
-    <section id="page5">
+    <section id="page4B">
+        <div id="faq">
+            <div id="faqLeft">
+                <h1>Frequently Asked Questions</h1>
+            </div>
+
+            <div id="faqRight">
+                <p>Find answers to common questions about our career guidance services and personality assessments.</p>
+            </div>
+        </div>
+
+        <div id="faqProcess">
+            <div class="faqItem faq1">
+                <div class="faqContent">
+                    <div class="faqHeading">
+                        <h1>01</h1>
+                        <h2>How accurate is the personality assessment?</h2>
+                    </div>
+
+                    <div id="faqString1">
+                        <svg id="faqStr1" class="hidden" width="1100" height="100">
+                            <path d="M 10 50 Q 600 50 1100 50" stroke="black" fill="transparent" />
+                        </svg>
+                    </div>
+
+                    <div class="faqAnswer faqAns1 hidden">
+                        <p>Our AI-driven personality assessment uses scientifically validated methodologies and has been tested with thousands of users. The accuracy rate is over 85% based on user feedback and career success tracking. We continuously improve our algorithms based on real-world outcomes.</p>
+                    </div>
+                </div>
+
+                <div class="faqIcon faqIcon1">
+                    <img src="./assets/+.svg" alt="">
+                </div>
+            </div>
+
+            <div class="faqItem faq2">
+                <div class="faqContent">
+                    <div class="faqHeading">
+                        <h1>02</h1>
+                        <h2>How long does the assessment take?</h2>
+                    </div>
+
+                    <div id="faqString2">
+                        <svg id="faqStr2" class="hidden" width="1100" height="100">
+                            <path d="M 10 50 Q 600 50 1100 50" stroke="black" fill="transparent" />
+                        </svg>
+                    </div>
+
+                    <div class="faqAnswer faqAns2 hidden">
+                        <p>The comprehensive personality assessment typically takes 15-20 minutes to complete. We've designed it to be thorough yet time-efficient. You can pause and resume the test at any time, and your progress will be saved automatically.</p>
+                    </div>
+                </div>
+
+                <div class="faqIcon faqIcon2">
+                    <img src="./assets/+.svg" alt="">
+                </div>
+            </div>
+
+            <div class="faqItem faq3">
+                <div class="faqContent">
+                    <div class="faqHeading">
+                        <h1>03</h1>
+                        <h2>What career recommendations will I receive?</h2>
+                    </div>
+                    
+                    <div id="faqString3">
+                        <svg id="faqStr3" class="hidden" width="1100" height="100">
+                            <path d="M 10 50 Q 600 50 1100 50" stroke="black" fill="transparent" />
+                        </svg>
+                    </div>
+
+                    <div class="faqAnswer faqAns3 hidden">
+                        <p>You'll receive a detailed report with 5-10 career recommendations tailored to your personality, interests, and skills. Each recommendation includes job descriptions, required qualifications, salary ranges, growth prospects, and suggested learning paths to help you get started.</p>
+                    </div>
+                </div>
+
+                <div class="faqIcon faqIcon3">
+                    <img src="./assets/+.svg" alt="">
+                </div>
+            </div>
+
+            <div class="faqItem faq4">
+                <div class="faqContent">
+                    <div class="faqHeading">
+                        <h1>04</h1>
+                        <h2>Is the career counselor support really 24/7?</h2>
+                    </div>
+                    
+                    <div id="faqString4">
+                        <svg id="faqStr4" class="hidden" width="1100" height="100">
+                            <path d="M 10 50 Q 600 50 1100 50" stroke="black" fill="transparent" />
+                        </svg>
+                    </div>
+
+                    <div class="faqAnswer faqAns4 hidden">
+                        <p>Yes! Our AI-powered career counselor is available 24/7 for instant guidance. For complex queries requiring human expertise, our certified career counselors are available during business hours (9 AM - 6 PM). You can schedule one-on-one sessions through our platform.</p>
+                    </div>
+                </div>
+
+                <div class="faqIcon faqIcon4">
+                    <img src="./assets/+.svg" alt="">
+                </div>
+            </div>
+
+            <div class="faqItem faq5">
+                <div class="faqContent">
+                    <div class="faqHeading">
+                        <h1>05</h1>
+                        <h2>How much does the service cost?</h2>
+                    </div>
+                    
+                    <div id="faqString5">
+                        <svg id="faqStr5" class="hidden" width="1100" height="100">
+                            <path d="M 10 50 Q 600 50 1100 50" stroke="black" fill="transparent" />
+                        </svg>
+                    </div>
+
+                    <div class="faqAnswer faqAns5 hidden">
+                        <p>The basic personality assessment is completely free! Premium features including detailed career roadmaps, one-on-one counselor sessions, and continuous tracking start at $29/month. We also offer student discounts and free trials for all premium features.</p>
+                    </div>
+                </div>
+
+                <div class="faqIcon faqIcon5">
+                    <img src="./assets/+.svg" alt="">
+                </div>
+            </div>
+
+            <div class="faqItem faq6">
+                <div class="faqContent">
+                    <div class="faqHeading">
+                        <h1>06</h1>
+                        <h2>Can I retake the assessment?</h2>
+                    </div>
+
+                    <div id="faqString6">
+                        <svg id="faqStr6" class="hidden" width="1100" height="100">
+                            <path d="M 10 50 Q 600 50 1100 50" stroke="black" fill="transparent" />
+                        </svg>
+                    </div>
+
+                    <div class="faqAnswer faqAns6 hidden">
+                        <p>Absolutely! You can retake the assessment every 6 months to track your personal growth and evolving interests. We recommend retaking it when you've gained significant life experience, completed education milestones, or feel your interests have shifted.</p>
+                    </div>
+                </div>
+
+                <div class="faqIcon faqIcon6">
+                    <img src="./assets/+.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="page6">
         <div id="Contact">
             <div id="Cleft">
                 <h1>Contact Us</h1>
