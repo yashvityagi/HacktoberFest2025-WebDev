@@ -118,6 +118,69 @@ body{
     z-index: 10;
 }
 
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #panel {
+        width: 95%;
+        height: 85%;
+    }
+    
+    #ptop {
+        height: 80px;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .elem {
+        font-size: 18px;
+        gap: 8px;
+    }
+    
+    .box {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+    
+    #pbtm {
+        padding: 10px;
+    }
+    
+    .bubble {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #panel {
+        width: 98%;
+        height: 90%;
+    }
+    
+    #ptop {
+        height: 70px;
+        padding: 8px;
+    }
+    
+    .elem {
+        font-size: 16px;
+        gap: 6px;
+    }
+    
+    .box {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+    
+    .bubble {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
+
 #bubble::after {
     content: '';
     position: absolute;

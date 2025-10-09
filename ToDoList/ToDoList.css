@@ -100,3 +100,80 @@ input {
 .addBtn:hover {
     background-color: #B9FF66;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+    }
+    
+    .header h2 {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    
+    .header input {
+        font-size: 16px;
+        padding: 12px 16px;
+        margin: 8px 0;
+    }
+    
+    .addBtn {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+    
+    ul li {
+        font-size: 16px;
+        padding: 10px 8px 10px 35px;
+    }
+    
+    ul li.checked::before {
+        left: 12px;
+        height: 12px;
+        width: 6px;
+    }
+    
+    .close {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 15px;
+    }
+    
+    .header h2 {
+        font-size: 20px;
+        margin: 8px 0;
+    }
+    
+    .header input {
+        font-size: 14px;
+        padding: 10px 12px;
+        margin: 6px 0;
+    }
+    
+    .addBtn {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+    
+    ul li {
+        font-size: 14px;
+        padding: 8px 6px 8px 30px;
+    }
+    
+    ul li.checked::before {
+        left: 10px;
+        height: 10px;
+        width: 5px;
+    }
+    
+    .close {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+}
